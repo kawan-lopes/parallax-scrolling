@@ -22,10 +22,10 @@
         <img src="images/moon.png" alt="" id="moon">
         <img src="images/mountains_behind.png" alt="" id="mountains_behind">
         <h2 id="text">Moon Light</h2>
-        <a href="#" id="btn">Explorar</a>
+        <a href="#sec" id="btn">Explorar</a>
         <img src="images/mountains_front.png" alt="" id="mountains_front">
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
         <h2>Parallax Efeito de Scroll</h2>
         <p>A Lua é um satélite natural, seu nome é derivado do latim Luna.Não existem 
         informações precisas acerca de quando surgiu a Lua, o que se sabe é que ela se 
@@ -51,5 +51,25 @@
         correspondente ao movimento de translação.
         </p>
     </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';   
+            mountains_behind.style.top = value * 0.5 + 'px'; 
+            mountains_front.style.top = value * 0 + 'px';    
+            text.style.marginTop = value * 1.5 + 'px';   
+            btn.style.marginTop = value * 1.5 + 'px';
+            btn.style.top = value * 0.5 + 'px';
+        })
+    </script>
 </body>
 </html>
