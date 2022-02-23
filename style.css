@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     min-height: 100vh;
     background:linear-gradient(#2b1055, #7507de);
+    overflow-x: hidden;
 }
 header{
     position: absolute;
@@ -53,6 +57,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 section::before{
     content: '';
@@ -82,8 +87,7 @@ select img#mountains_front{
     position: absolute;
     color: #fff;
     white-space: nowrap;
-    font-size: 7.5vw;
-    z-index: 9;
+    font-size: 6.8vw;
 }
 #btn{
     text-decoration: none;
